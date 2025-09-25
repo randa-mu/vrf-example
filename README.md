@@ -4,6 +4,7 @@ A starter kit demonstrating the integration of Randamu's randomness solutions fo
 
 1. **Random Number Generator**: Using the Randamu Solidity library
 2. **Coin Flip**: Using the Randamu JavaScript library
+3. **Schwag Roulette**: Using the Randamu Solidity library
 
 ## 📁 Project Structure
 
@@ -17,6 +18,12 @@ vrf-example/
 │   ├── randomnumber/               # Random number generator demo
 │   │   ├── page.tsx                # Main random number page
 │   │   └── header.tsx              # Header component
+│   ├── schwagroulette/              # Schwag Roulette demo
+│   │   ├── page.tsx                # Spin-the-wheel main page
+│   │   ├── header.tsx              # Header component
+│   │   ├── components/
+│   │   │   └── WheelCanvas.tsx     # Canvas-based wheel renderer
+│   │   └── assets/                 # Prize asset images
 │   ├── layout.tsx                  # Root layout with font configuration
 │   ├── providers.tsx               # Wallet and query providers
 │   ├── ReactQueryProvider.tsx      # React Query provider setup
@@ -70,12 +77,23 @@ Located in `app/coinflip/page.tsx`, this demo uses the Randamu JavaScript librar
 - Interactive UI
 - Real-time updates
 
+### 3. Schwag Roulette
+Located in `app/schwagroulette/page.tsx`, this demo showcases a spin-the-wheel experience that uses on-chain verifiable randomness. Features:
+- Wheel UI with prize segments and assets
+- On-chain randomness via VRF
+- Win/Loss modals
+- Mobile-responsive layout
+
 ## Configuration
 
 ### Environment Variables
 - `NEXT_PUBLIC_WALLET_CONNECT_PROJECT_ID`
 
 Your WalletConnect project ID. You can get a wallet connect project ID by registering for free at https://cloud.reown.com and creating a project.
+
+- `NEXT_PUBLIC_ALCHEMY_KEY`
+
+An Alchemy API key for your chosen network (defaults to Base Sepolia in this repo). Get one at https://dashboard.alchemy.com for free.
 
 ### Changing the supported chain
 To run on a chain other than the default (Base Sepolia) you must first:
