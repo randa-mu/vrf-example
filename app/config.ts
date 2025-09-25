@@ -5,7 +5,7 @@ import {Chain} from "@rainbow-me/rainbowkit"
 // or by using `defineChain` from viem
 export const supportedChains: Array<Chain>= [baseSepolia];
 
-export const CONTRACT_ADDRESS = '0x19a367E12Ea972a2eBCdFc46e26970892347d150';
+export const CONTRACT_ADDRESS = '0xf4e080Db4765C856c0af43e4A8C4e31aA3b48779';
 
 export const CONTRACT_ABI = [
 	{
